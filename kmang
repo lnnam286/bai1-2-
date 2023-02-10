@@ -1,0 +1,32 @@
+var 
+  s: array[1..100] of integer;
+  a,b,c,d,i: integer;
+begin
+  i := 0;
+  a := 0;
+  b := 0;
+  c := 0;
+  d := 0;
+  write('Nhap vao cac so nguyen, nhap 0 de ket thuc: ');
+  readln(s[i]);
+  while s[i] <> 0 do
+  begin
+    i := i + 1;
+    readln(s[i]);
+    if s[i] > 0 then 
+    begin
+      a := a + s[i];
+      c := c + 1;
+    end
+    else if s[i] < 0 then 
+    begin
+      b := b + s[i];
+      d := d + 1;
+    end;
+  end;
+  writeln('Tong cac so nguyen duong: ', a);
+  if d > 0 then
+    writeln('Trung binh cong cac so nguyen am: ', b/d:0:2)
+  else
+    writeln('Khong co so nguyen am');
+end.
